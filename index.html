@@ -1,235 +1,168 @@
-
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>مالك سامح | خدمات QUREO</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#080e1c;color:#f5f7fc;font-family:Tahoma,Arial,sans-serif;line-height:1.8}
-.container{width:min(1100px,92%);margin:auto}
-header{padding:22px 0;border-bottom:1px solid #ffffff20;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.logo{color:#d8b45a;font-size:23px;font-weight:bold}
-nav a{color:#ddd;text-decoration:none;margin:0 8px;font-size:14px}
-.btn{display:inline-block;padding:12px 18px;border:0;border-radius:10px;background:#d8b45a;color:#101522;font-weight:bold;text-decoration:none;cursor:pointer;font:inherit}
-.hero{padding:65px 0;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-h1{font-size:clamp(32px,5vw,55px);line-height:1.3}
-.gold{color:#d8b45a}
-p{color:#b5c0d3}
-.card{background:#111b2d;border:1px solid #ffffff20;border-radius:20px;padding:25px;margin-bottom:18px}
-.price{background:linear-gradient(135deg,#f4d989,#c49b3d);color:#111827;padding:24px;border-radius:18px}
-.price strong{display:block;font-size:40px}
-.profile-image{display:block;width:100%;max-height:390px;object-fit:cover;object-position:center top;border-radius:16px;margin-bottom:16px;border:1px solid #ffffff25}
-.hero-panel{overflow:hidden}
-@media(max-width:750px){.profile-image{max-height:340px}}
-section{padding:45px 0}
-.section-title{text-align:center;margin-bottom:30px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.field{margin:22px 0}
-label{display:block;font-weight:bold;margin-bottom:8px}
-select{width:100%;padding:13px;border-radius:10px;background:#080e1c;color:white;border:1px solid #ffffff30}
-input[type=range]{width:100%;accent-color:#d8b45a}
-.result{background:linear-gradient(140deg,#d8b45a,#f1d88e);color:#111827}
-.result p{color:#40351d}
-.total{font-size:45px;font-weight:bold}
-.line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #11182730}
-footer{border-top:1px solid #ffffff20;padding:25px 0;color:#aab7cb;font-size:13px;text-align:center}.social-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:14px}.social-links a{display:inline-block;padding:10px 16px;border-radius:10px;background:#111b2d;border:1px solid #ffffff25;color:#f5f7fc;text-decoration:none}.social-links a:hover{border-color:#d8b45a}
-@media(max-width:750px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}nav{display:none}}
-@media(max-width:480px){.features{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1224">
+  <meta name="description" content="خدمات دعم ومتابعة تعليمية مستقلة متعلقة بمنصة QUREO مع حاسبة أسعار واضحة وتواصل مباشر مع مالك سامح عبر واتساب.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:title" content="مالك سامح | خدمات دعم ومتابعة QUREO">
+  <meta property="og:description" content="احسب التكلفة بوضوح وتواصل مباشرة للاستفسار عن خدمات المتابعة التعليمية قبل الدفع.">
+  <title>مالك سامح | خدمات دعم ومتابعة QUREO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#090f1e;--bg2:#0d162a;--card:#111d32;--card2:#16243a;--border:rgba(220,231,248,.12);--txt:#f5f7fd;--muted:#afbbcd;--gold:#e3bd68;--gold2:#f6dda2;--blue:#93bdf3;--shadow:0 18px 50px rgba(0,0,0,.19)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:94px}
+    body{margin:0;background:radial-gradient(ellipse 56% 28% at 12% 4%,rgba(32,62,105,.22),transparent),var(--bg);color:var(--txt);font:500 15px/1.95 'Cairo',Tahoma,Arial,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button,select,input{font:inherit}button{cursor:pointer}img{max-width:100%;display:block}
+    ::selection{background:#b98b43;color:#0a1222}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip{position:absolute;top:-100px;right:12px;z-index:50;background:var(--gold);color:#111d32;padding:8px 16px;border-radius:10px}.skip:focus{top:12px}
+    .topbar{background:#121d31;border-bottom:1px solid var(--border);font-size:12px;color:#ccd6e5}
+    .topbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:34px}
+    .topbar a{color:var(--gold2);font-weight:700}
+    .site-header{position:sticky;top:0;z-index:40;background:rgba(10,17,31,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .header-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-mark{height:47px;width:47px;display:grid;place-items:center;border:1px solid #e1bd697a;border-radius:15px;color:var(--gold2);background:linear-gradient(145deg,#26334a,#101929);font-size:17px;font-weight:900;direction:ltr;box-shadow:inset 0 1px 0 #ffffff24}
+    .brand-title{display:block;font-size:18px;line-height:1.55;font-weight:900}.brand-subtitle{display:block;color:#aebcd0;font-size:10px;letter-spacing:.15px;line-height:1.3}
+    .desktop-nav{display:flex;align-items:center;gap:26px;font-size:13px;color:#c8d3e3}.desktop-nav a:hover,.footer-links a:hover{color:var(--gold)}
+    .header-actions{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:13px;padding:12px 21px;font-size:13px;font-weight:900;line-height:1.5;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s;white-space:nowrap;text-align:center}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{background:linear-gradient(120deg,var(--gold2),#d9ad57);color:#142038;box-shadow:0 12px 30px #e3bd681b}.btn-primary:hover{background:linear-gradient(120deg,#ffe8b5,#e9bc66)}
+    .btn-outline{border-color:#e3bd6877;background:transparent;color:var(--gold2)}.btn-outline:hover{background:#e3bd6812}
+    .btn-muted{border-color:var(--border);background:var(--card2);color:var(--txt)}
+    .mobile-toggle,.mobile-nav{display:none}
+    .section{padding:88px 0}.section-soft{background:linear-gradient(180deg,#101b30,#0c1628);border-block:1px solid var(--border)}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center;padding:85px 0 84px}
+    .eyebrow{color:var(--gold2);font-weight:800;font-size:12px;letter-spacing:.1px;display:flex;gap:9px;align-items:center;margin-bottom:17px}.eyebrow:before{content:'';width:22px;height:2px;background:var(--gold);border-radius:20px}
+    h1,h2,h3,p{margin-top:0}h1{font-size:clamp(34px,4.25vw,59px);line-height:1.45;font-weight:900;letter-spacing:-1.2px;margin-bottom:19px}h2{font-size:clamp(26px,3vw,37px);line-height:1.5;font-weight:900;letter-spacing:-.6px;margin-bottom:13px}h3{font-size:19px;line-height:1.55;font-weight:800;margin-bottom:10px}
+    .gold{color:var(--gold2)}.lead{font-size:16px;line-height:2.15;color:#c0cada;max-width:620px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.hero-facts{display:flex;gap:23px;flex-wrap:wrap;margin-top:30px;padding-top:23px;border-top:1px solid var(--border)}
+    .fact{display:flex;align-items:center;gap:8px;font-size:12px;color:#c0cbdc}.fact .dot{display:grid;place-items:center;border-radius:50%;width:25px;height:25px;background:#2a3c42;color:#b8efcc;font-weight:900}
+    .hero-visual{position:relative}.visual-frame{border-radius:27px;padding:10px;background:linear-gradient(140deg,#e3bd68aa,#758cb14a 43%,#e3bd683d);box-shadow:var(--shadow)}
+    .image-shell{background:var(--card);border:9px solid #0e1828;border-radius:22px;overflow:hidden}.hero-photo{width:100%;height:440px;object-fit:cover;object-position:top center}
+    .identity{padding:17px 21px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#111d32}.identity strong{font-size:18px}.identity span{display:block;font-size:11px;color:#b0bed0}.identity .tag{font-size:10px;color:#d9e4f1;border:1px solid var(--border);border-radius:50px;padding:5px 10px;white-space:nowrap}
+    .visual-note{position:absolute;bottom:86px;left:-29px;max-width:190px;background:#f2dba9;color:#192237;border-radius:16px;padding:12px 16px;box-shadow:0 14px 40px #0006;font-weight:800;font-size:12px;line-height:1.8}.visual-note span{display:block;font-size:11px;font-weight:600;color:#4a4a40}
+    .trust-strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:20px;overflow:hidden;background:#101b2e}.trust-item{padding:22px;display:flex;gap:12px;align-items:center}.trust-item:not(:last-child){border-left:1px solid var(--border)}.trust-icon{display:grid;place-items:center;flex:0 0 43px;height:43px;border-radius:12px;background:#d4aa5420;color:var(--gold2);font-size:20px}.trust-item strong{display:block;font-size:14px}.trust-item span{display:block;color:var(--muted);font-size:11px}
+    .section-head{max-width:720px;margin:0 auto 35px;text-align:center}.section-head .eyebrow{justify-content:center}.section-head .eyebrow:before{display:none}.section-head p{color:var(--muted);font-size:14px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(150deg,#142139,#101a2e);border:1px solid var(--border);border-radius:20px;padding:26px;box-shadow:0 8px 32px #00000015}.card p{font-size:13px;color:var(--muted);line-height:2;margin:0}.card-icon{display:grid;place-items:center;width:51px;height:51px;background:#e3bd6814;border:1px solid #e3bd682d;color:var(--gold2);border-radius:16px;font-size:24px;margin-bottom:18px}
+    .calc-layout{display:grid;grid-template-columns:1.07fr .93fr;gap:22px;align-items:start}.calc-card{background:#121f35;border:1px solid var(--border);border-radius:22px;padding:30px}.calc-card h3{margin-bottom:2px}.subtle{color:var(--muted);font-size:12px}
+    .field{margin:26px 0}.field-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}.field label{font-weight:800;color:#edf3fb;font-size:13px}.value-pill{font-size:15px;font-weight:900;color:var(--gold2);background:#e3bd6815;border:1px solid #e3bd6827;border-radius:11px;padding:2px 14px;min-width:53px;text-align:center}
+    select{width:100%;padding:13px 14px;border:1px solid #52617b80;border-radius:12px;color:var(--txt);background:#0d192d;outline:0}select:focus{border-color:var(--gold)}
+    input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer;height:24px;direction:ltr}.range-ends{display:flex;justify-content:space-between;direction:ltr;font-size:11px;color:var(--muted)}
+    .inline-note{font-size:11px;color:#aebbd0;margin:4px 0 0}.promo{display:flex;justify-content:space-between;align-items:center;gap:15px;border:1px solid #e3bd682d;background:#e3bd680d;padding:14px 17px;border-radius:13px;font-weight:800;font-size:12px}.promo strong{color:var(--gold2);font-size:17px}
+    .summary{background:linear-gradient(150deg,#f4dfa9,#d7ad5a);color:#17243a;border-color:#f5dfa9;position:sticky;top:105px}.summary h3{font-size:17px}.summary>p,.summary .muted-on-gold{color:#514b41}.total-label{font-size:12px;font-weight:700}.grand-total{font-size:clamp(36px,4.2vw,55px);font-weight:900;line-height:1.6;letter-spacing:-1px}.grand-total small{font-size:20px}
+    .summary-lines{margin:22px 0 21px;border-top:1px solid #58482b35}.summary-line{display:flex;justify-content:space-between;gap:15px;font-size:12px;padding:11px 0;border-bottom:1px solid #58482b35}.summary-line strong{font-size:13px}.summary .btn-primary{background:#192844;color:#fff;box-shadow:none;width:100%}.summary .btn-primary:hover{background:#253956}.summary-note{font-size:11px;line-height:1.9;color:#554a37!important;margin-top:14px!important}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:steps}.step{padding:23px;background:#142038;border:1px solid var(--border);border-radius:18px}.step-number{font:900 28px/1.4 'Cairo',sans-serif;color:var(--gold2);opacity:.9}.step h3{font-size:16px;margin:8px 0}.step p{font-size:12px;color:var(--muted);margin:0}
+    .about-layout{display:grid;grid-template-columns:1.06fr .94fr;gap:26px;align-items:stretch}.about-text{padding:35px 34px}.about-text p{font-size:14px;color:var(--muted)}.about-list{margin:19px 0;padding:0;list-style:none}.about-list li{margin:12px 0;font-size:13px}.about-list li::before{content:'✓';color:var(--gold2);font-weight:900;margin-left:9px}
+    .contact-panel{display:flex;flex-direction:column;justify-content:center;gap:11px}.contact-row{display:flex;gap:11px;align-items:center;background:#17253c;border:1px solid var(--border);border-radius:14px;padding:12px 15px;min-width:0}.contact-row .emoji{font-size:22px}.contact-row strong,.contact-row span{display:block}.contact-row strong{font-size:13px}.contact-row span{font-size:11px;color:var(--muted);overflow-wrap:anywhere}.contact-row:hover{border-color:#e3bd6870}
+    .faq{max-width:840px;margin:auto}.faq details{border:1px solid var(--border);border-radius:15px;background:#121e32;margin:12px 0;padding:0 20px}.faq summary{font-size:14px;font-weight:800;cursor:pointer;list-style:none;padding:19px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';color:var(--gold2);font-size:22px;font-weight:500}.faq details[open] summary::after{content:'−'}.faq details p{font-size:13px;color:var(--muted);padding-bottom:17px;margin:0}
+    .payment{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:27px 32px;border:1px solid #e3bd6843;border-radius:21px;background:linear-gradient(120deg,#2b2b29,#17243b 60%)}.payment h2{font-size:21px;margin:0 0 8px}.payment p{font-size:12px;color:#c1cada;margin:0}.payment-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.payment-number{font:900 25px/1.5 'Cairo',sans-serif;direction:ltr;unicode-bidi:isolate;color:var(--gold2)}
+    .footer{border-top:1px solid var(--border);padding:36px 0;background:#090f1c}.footer-inner{display:flex;justify-content:space-between;gap:26px;align-items:center}.footer p{color:var(--muted);font-size:11px;margin:5px 0}.footer strong{font-size:17px}.footer-links{display:flex;gap:19px;flex-wrap:wrap;font-size:12px;color:#c5d0df}.copyright{margin-top:22px;padding-top:17px;border-top:1px solid var(--border);color:#8e9cb0;font-size:10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .floating-wa{position:fixed;bottom:22px;left:22px;z-index:30;display:flex;align-items:center;gap:8px;background:#167c55;color:#fff;border:1px solid #fff3;padding:11px 16px;border-radius:40px;font-weight:800;font-size:12px;box-shadow:0 12px 30px #0005}.floating-wa:hover{background:#1a9061}
+    .toast{position:fixed;bottom:90px;left:18px;background:#1c3350;color:#fff;border:1px solid #e3bd6860;padding:12px 19px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;z-index:70;opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translateY(0)}
+    @media(max-width:1020px){.desktop-nav{gap:15px}.hero{gap:35px}.visual-note{left:-12px}.hero-photo{height:390px}.steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:780px){.desktop-nav,.header-actions .btn{display:none}.mobile-toggle{display:grid;place-items:center;width:44px;height:44px;border-radius:11px;background:#1b2940;border:1px solid var(--border);color:#fff;font-size:23px}.mobile-nav{display:none;flex-direction:column;gap:0;border-top:1px solid var(--border);padding:8px 0 16px}.mobile-nav.open{display:flex}.mobile-nav a{padding:10px 2px;font-size:13px;color:#e4e9f2}.header-inner{height:72px}.section{padding:62px 0}.hero{padding:54px 0;grid-template-columns:1fr;gap:38px}.hero-visual{max-width:530px;width:100%;margin:auto}.hero-photo{height:auto;max-height:470px;aspect-ratio:1.2;object-fit:cover}.visual-note{left:0}.trust-strip{grid-template-columns:1fr}.trust-item:not(:last-child){border-left:0;border-bottom:1px solid var(--border)}.cards{grid-template-columns:1fr 1fr}.calc-layout,.about-layout{grid-template-columns:1fr}.summary{position:static}.footer-inner{flex-direction:column;align-items:flex-start}.payment{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.container{width:min(100% - 28px,1160px)}.topbar{font-size:10px}.topbar .container{min-height:37px}.topbar .small-hide{display:none}.brand-title{font-size:16px}.brand-mark{width:43px;height:43px}.hero{padding:43px 0 48px}h1{font-size:35px}.lead{font-size:14px}.hero-actions .btn{flex:1 1 100%}.hero-facts{gap:13px}.fact{font-size:11px}.visual-note{left:-3px;bottom:92px}.cards,.steps{grid-template-columns:1fr}.section{padding:55px 0}.card,.calc-card{padding:22px}.section-head{margin-bottom:23px}.payment{padding:23px}.payment-number{font-size:23px}.floating-wa{left:12px;bottom:12px;padding:12px 14px}.floating-wa .wa-label{display:none}.footer-links{gap:13px}.identity{padding:13px}.identity strong{font-size:16px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.toast{transition:none}}
+  </style>
 </head>
 <body>
-<div class="container">
-<header>
-<div class="logo">مالك سامح <small style="display:block;font-size:11px;color:#c4cddd">خدمات QUREO التعليمية</small></div>
-<nav>
-<a href="#features">المميزات</a>
-<a href="#calculator">حاسبة الأسعار</a>
-<a href="#steps">طريقة الطلب</a>
-</nav>
-<a class="btn" href="#calculator">احسب طلبك</a>
-</header>
-
-<main>
-<section class="hero">
-<div>
-<p class="gold">تجربة أوضح • طلب أسهل • حساب فوري</p>
-<h1>خلّي إنجازك في <span class="gold">QUREO</span> أسهل وأذكى.</h1>
-<p>السعر الرسمي للخدمة 150 جنيه. ويمكنك استخدام حاسبة الأسعار لمعرفة تكلفة الشابترات والإعادات حسب اختيارك.</p>
-<a class="btn" href="#calculator">احسب التكلفة الآن ←</a>
-</div>
-<div class="card hero-panel">
-<img class="profile-image" src="assets/Malek.png" alt="مالك سامح - خدمات QUREO التعليمية">
-<div class="price">
-<strong>150 جنيه</strong>
-السعر الرسمي للخدمة
-</div>
-<div class="features" style="margin-top:15px">
-<div class="card">⚡<br><b>حساب فوري</b></div>
-<div class="card">✦<br><b>خصم ثابت</b></div>
-</div>
-</div>
-</section>
-
-<section id="features">
-<div class="section-title">
-<p class="gold">المميزات</p>
-<h2>كل التفاصيل واضحة</h2>
-</div>
-<div class="features">
-<div class="card"><h3>🧮 حاسبة تفاعلية</h3><p>شوف التكلفة تتغير تلقائيًا.</p></div>
-<div class="card"><h3>💰 السعر الرسمي</h3><p>150 جنيه للخدمة.</p></div>
-<div class="card"><h3>💬 طلب عبر واتساب</h3><p>جهز تفاصيل طلبك للتواصل.</p></div>
-</div>
-</section>
-
-<section id="calculator">
-<div class="section-title">
-<p class="gold">حاسبة الأسعار</p>
-<h2>احسب التكلفة بنفسك</h2>
-<p>خصم ثابت 50% يُطبق تلقائيًا ولا يمكن تغييره.</p>
-</div>
-
-<div class="features" style="grid-template-columns:1fr 1fr">
-<div class="card">
-<h3>تفاصيل الطلب</h3>
-<div class="field">
-<label for="term">نوع الطلب</label>
-<select id="term">
-<option>طلب شابترات فقط</option>
-<option>الترم الأول — الحساب حسب عدد الشابترات</option>
-<option>الترم الثاني — الحساب حسب عدد الشابترات</option>
-</select>
-</div>
-
-<div class="field">
-<label>عدد الشابترات: <span id="chapterCount">10</span></label>
-<input id="chapters" type="range" min="1" max="39" value="10">
-<p>الشابتر: 8 جنيه قبل الخصم، و4 جنيهات بعده.</p>
-</div>
-
-<div class="field">
-<label>عدد مرات إعادة الشابتر: <span id="retryCount">0</span></label>
-<input id="retries" type="range" min="0" max="20" value="0">
-<p>الإعادة: 8 جنيه قبل الخصم، و4 جنيهات بعده.</p>
-</div>
-
-<div class="field">
-<label>الخصم المطبق</label>
-<div class="price"><b>50% خصم ثابت</b></div>
-</div>
-</div>
-
-<div class="card result">
-<h3>الإجمالي بعد الخصم</h3>
-<div class="total"><span id="total">40</span> جنيه</div>
-<p>تم تطبيق خصم تلقائي ثابت 50%.</p>
-<div class="line"><span>الإجمالي قبل الخصم</span><b id="base">80 جنيه</b></div>
-<div class="line"><span>تكلفة الإعادات قبل الخصم</span><b id="retryCost">0 جنيه</b></div>
-<div class="line"><span>قيمة الخصم</span><b id="discountAmount">40 جنيه</b></div>
-<button class="btn" id="sendOrder" style="width:100%;margin-top:20px">جهّز طلبي على واتساب ↗</button>
-<p style="font-size:12px">واتساب وفودافون كاش: <b dir="ltr">01042231211</b></p>
-</div>
-</div>
-</section>
-
-<section id="payment">
-<div class="section-title"><p class="gold">الدفع</p><h2>بيانات فودافون كاش</h2></div>
-<div class="card" style="max-width:650px;margin:0 auto;text-align:center">
-<h3>💳 رقم فودافون كاش</h3>
-<p dir="ltr" style="font-size:28px;font-weight:bold;color:#d8b45a">01042231211</p>
-<p>السعر الرسمي للخدمة: <b style="color:#d8b45a">150 جنيه</b></p>
-<p>تأكد من مراجعة تفاصيل الطلب قبل الدفع.</p>
-</div>
-</section>
-
-<section id="steps">
-<div class="section-title"><h2>طريقة الطلب</h2></div>
-<div class="features">
-<div class="card"><h3>01 — اختار</h3><p>حدد عدد الشابترات والإعادات.</p></div>
-<div class="card"><h3>02 — راجع</h3><p>راجع الإجمالي والخصم قبل الإرسال.</p></div>
-<div class="card"><h3>03 — تواصل</h3><p>أرسل تفاصيل طلبك عبر واتساب.</p></div>
-</div>
-</section>
-</main>
-
-<footer>
-© <span id="year"></span> مالك سامح — خدمات مستقلة
-<div class="social-links">
-<a href="https://wa.me/201042231211" target="_blank" rel="noopener">💬 تواصل معي على واتساب</a>
-<a href="https://www.instagram.com/maleksameh011/" target="_blank" rel="noopener noreferrer">📸 تابعني على إنستجرام</a>
-<a href="https://www.facebook.com/maleksameh011" target="_blank" rel="noopener noreferrer">📘 تابعني على فيسبوك</a>
-</div>
-<p>واتساب وفودافون كاش: <b dir="ltr">01042231211</b></p>
-</footer>
-</div>
-
-<script>
-const $ = id => document.getElementById(id);
-const chapters = $("chapters");
-const retries = $("retries");
-
-const CHAPTER_PRICE = 8;
-const RETRY_PRICE = 8;
-const DISCOUNT_RATE = 50;
-
-// غيّر الرقم التالي إلى رقمك المصري الصحيح المكوّن من 11 رقمًا
-const WHATSAPP_PHONE = "01042231211";
-
-function calculate() {
-  const ch = Number(chapters.value);
-  const ret = Number(retries.value);
-  const base = ch * CHAPTER_PRICE;
-  const retryCost = ret * RETRY_PRICE;
-  const before = base + retryCost;
-  const discount = before * DISCOUNT_RATE / 100;
-  const total = before - discount;
-
-  $("chapterCount").textContent = ch;
-  $("retryCount").textContent = ret;
-  $("base").textContent = base + " جنيه";
-  $("retryCost").textContent = retryCost + " جنيه";
-  $("discountAmount").textContent = discount + " جنيه";
-  $("total").textContent = total;
-
-  return {ch, ret, base, retryCost, discount, total};
-}
-
-chapters.addEventListener("input", calculate);
-retries.addEventListener("input", calculate);
-$("year").textContent = new Date().getFullYear();
-
-$("sendOrder").addEventListener("click", () => {
-  const d = calculate();
-  const phone = WHATSAPP_PHONE.replace(/\D/g, "");
-
-  if (!/^(01)[0125][0-9]{8}$/.test(phone)) {
-    alert("رقم واتساب غير صحيح. تحقق من رقم التواصل.");
-    return;
-  }
-
-  const internationalPhone = "2" + phone.replace(/^0/, "");
-  const message =
-`السلام عليكم، أريد الاستفسار عن طلب خدمات QUREO.
-نوع الطلب: ${$("term").value}
-عدد الشابترات: ${d.ch}
-سعر الشابتر قبل الخصم: 8 جنيه
-سعر الشابتر بعد الخصم: 4 جنيهات
-عدد الإعادات: ${d.ret}
-الإجمالي قبل الخصم: ${d.base + d.retryCost} جنيه
-الخصم الثابت: 50%
-قيمة الخصم: ${d.discount} جنيه
-الإجمالي النهائي: ${d.total} جنيه
-أرجو تأكيد الطلب.`;
-
-  window.open(
-    "https://wa.me/" + internationalPhone + "?text=" + encodeURIComponent(message),
-    "_blank"
-  );
-});
-
-calculate();
-</script>
+  <a class="skip" href="#main">انتقل للمحتوى</a>
+  <div class="topbar"><div class="container"><span>خدمات تعليمية مستقلة • غير تابعة رسميًا لمنصة QUREO</span><a class="small-hide" href="https://wa.me/201042231211" target="_blank" rel="noopener noreferrer">استفسار مباشر على واتساب ←</a></div></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="الصفحة الرئيسية - مالك سامح"><span class="brand-mark">MS</span><span><span class="brand-title">مالك سامح</span><span class="brand-subtitle">خدمات دعم ومتابعة QUREO</span></span></a>
+      <nav class="desktop-nav" aria-label="التنقل الرئيسي"><a href="#advantages">المميزات</a><a href="#calculator">حاسبة الأسعار</a><a href="#how-it-works">خطوات الطلب</a><a href="#about">عن الخدمة</a><a href="#faq">الأسئلة الشائعة</a></nav>
+      <div class="header-actions"><a class="btn btn-primary" href="#calculator">احسب التكلفة <span aria-hidden="true">↗</span></a><button class="mobile-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileNav" id="menuToggle">☰</button></div>
+    </div>
+    <nav class="container mobile-nav" id="mobileNav" aria-label="التنقل للموبايل"><a href="#advantages">المميزات</a><a href="#calculator">حاسبة الأسعار</a><a href="#how-it-works">خطوات الطلب</a><a href="#about">عن الخدمة</a><a href="#faq">الأسئلة الشائعة</a></nav>
+  </header>
+  <main id="main">
+    <div class="container" id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">وضوح في التفاصيل، وسهولة في التواصل</div>
+          <h1 id="hero-title">خدمات متابعة <span class="gold">QUREO</span> بشكل أكثر وضوحًا وتنظيمًا.</h1>
+          <p class="lead">تعرف على طريقة الخدمة، وحدد عدد الشابترات والإعادات لحساب التكلفة التقديرية، ثم تواصل مباشرة مع مالك سامح لتأكيد التفاصيل <strong style="color:#f0f4fc">قبل أي دفع</strong>.</p>
+          <div class="hero-actions"><a href="#calculator" class="btn btn-primary">احسب تكلفة طلبك <span aria-hidden="true">←</span></a><a href="#about" class="btn btn-outline">تعرف على الخدمة</a></div>
+          <div class="hero-facts"><div class="fact"><span class="dot" aria-hidden="true">✓</span> أسعار واضحة</div><div class="fact"><span class="dot" aria-hidden="true">✓</span> تواصل مع مقدم الخدمة</div><div class="fact"><span class="dot" aria-hidden="true">✓</span> تأكيد قبل الدفع</div></div>
+        </div>
+        <div class="hero-visual"><div class="visual-frame"><div class="image-shell"><img class="hero-photo" src="assets/Malek.png" alt="صورة مالك سامح، مقدم الخدمة" width="1118" height="944" loading="eager"><div class="identity"><div><strong>مالك سامح</strong><span>مقدم خدمات دعم ومتابعة تعليمية مستقلة</span></div><span class="tag">تواصل مباشر</span></div></div></div><div class="visual-note">تكلفة واضحة <span>اعرف تفاصيل الحساب قبل مراسلتنا</span></div></div>
+      </section>
+      <div class="trust-strip" aria-label="معلومات عن الخدمة"><div class="trust-item"><div class="trust-icon" aria-hidden="true">٪</div><div><strong>خصم مُعلن 50%</strong><span>يظهر مباشرة في الحاسبة</span></div></div><div class="trust-item"><div class="trust-icon" aria-hidden="true">≡</div><div><strong>تفاصيل محسوبة أمامك</strong><span>عدد الشابترات والإعادات والإجمالي</span></div></div><div class="trust-item"><div class="trust-icon" aria-hidden="true">↗</div><div><strong>تواصل قبل تحويل أي مبلغ</strong><span>راجع الطلب وتأكد من جهة الاستلام</span></div></div></div>
+    </div>
+    <section id="advantages" class="section"><div class="container"><div class="section-head"><div class="eyebrow">ليه الصفحة دي مفيدة؟</div><h2>كل خطوة مفهومة من البداية</h2><p>هدفنا إنك تعرف تكلفة المتابعة وطريقة التواصل من غير تفاصيل مخفية.</p></div><div class="cards"><article class="card"><div class="card-icon" aria-hidden="true">▦</div><h3>حساب تلقائي ودقيق</h3><p>غيّر العدد، وشوف تكلفة كل بند وإجمالي الخصم لحظيًا.</p></article><article class="card"><div class="card-icon" aria-hidden="true">◎</div><h3>بيانات تواصل ظاهرة</h3><p>اسم مقدم الخدمة ورقم واتساب وروابط التواصل متاحة بسهولة.</p></article><article class="card"><div class="card-icon" aria-hidden="true">✓</div><h3>مراجعة قبل الدفع</h3><p>ابدأ برسالة استفسار تتضمن طلبك وتكلفته، ثم أكد التفاصيل أولًا.</p></article></div></div></section>
+    <section class="section section-soft" id="calculator"><div class="container"><div class="section-head"><div class="eyebrow">حاسبة التكلفة</div><h2>احسب تكلفة طلبك بنفسك</h2><p>الأسعار هنا بناءً على بيانات النسخة الأصلية من الموقع: 8 جنيهات للوحدة قبل الخصم، وخصم ثابت 50%. هذه حاسبة تقديرية ويُؤكد الطلب عند التواصل.</p></div>
+      <div class="calc-layout"><div class="calc-card"><h3>تفاصيل الطلب</h3><p class="subtle">اختار البيانات علشان تظهر لك تكلفة واضحة.</p>
+        <div class="field"><div class="field-head"><label for="term">نوع المتابعة</label></div><select id="term"><option value="متابعة شابترات فقط">متابعة شابترات فقط</option><option value="الترم الأول">الترم الأول</option><option value="الترم الثاني">الترم الثاني</option></select><p class="inline-note">نوع المتابعة يظهر في رسالة الاستفسار ولا يغيّر سعر الوحدة.</p></div>
+        <div class="field"><div class="field-head"><label for="chapters">عدد الشابترات</label><output class="value-pill" for="chapters" id="chapterCount">10</output></div><input id="chapters" type="range" min="1" max="39" step="1" value="10"><div class="range-ends"><span>1</span><span>39</span></div><p class="inline-note">سعر الشابتر: <strong>8 جنيهات قبل الخصم / 4 جنيهات بعده</strong>.</p></div>
+        <div class="field"><div class="field-head"><label for="retries">عدد الإعادات</label><output class="value-pill" for="retries" id="retryCount">0</output></div><input id="retries" type="range" min="0" max="20" step="1" value="0"><div class="range-ends"><span>0</span><span>20</span></div><p class="inline-note">سعر الإعادة: <strong>8 جنيهات قبل الخصم / 4 جنيهات بعده</strong>.</p></div>
+        <div class="promo"><span>الخصم المُطبق في الحاسبة</span><strong>50%</strong></div>
+      </div>
+      <aside class="calc-card summary" aria-label="ملخص التكلفة"><h3>ملخص تكلفة الطلب</h3><div class="total-label">الإجمالي التقديري بعد الخصم</div><div class="grand-total" aria-live="polite"><span id="total">40</span> <small>جنيه</small></div><div class="summary-lines"><div class="summary-line"><span>تكلفة الشابترات قبل الخصم</span><strong id="base">80 جنيه</strong></div><div class="summary-line"><span>تكلفة الإعادات قبل الخصم</span><strong id="retryCost">0 جنيه</strong></div><div class="summary-line"><span>الإجمالي قبل الخصم</span><strong id="beforeTotal">80 جنيه</strong></div><div class="summary-line"><span>قيمة الخصم (50%)</span><strong id="discountAmount">40 جنيه</strong></div><div class="summary-line"><span>الإجمالي بعد الخصم</span><strong id="finalTotal">40 جنيه</strong></div></div><button type="button" id="sendOrder" class="btn btn-primary">استفسر عن الطلب على واتساب <span aria-hidden="true">↗</span></button><p class="summary-note">لن يتم تحصيل أي مبلغ من خلال هذا الموقع. إرسال الرسالة لا يعني تأكيد الطلب، ويجب الاتفاق على التفاصيل قبل الدفع.</p></aside></div>
+    </div></section>
+    <section id="how-it-works" class="section"><div class="container"><div class="section-head"><div class="eyebrow">خطوات بسيطة</div><h2>من حساب التكلفة لتأكيد الطلب</h2><p>العملية كلها واضحة، وقرار الدفع بيكون بعد التواصل.</p></div><div class="steps"><div class="step"><div class="step-number">01</div><h3>حدد التفاصيل</h3><p>اختار نوع المتابعة وعدد الشابترات والإعادات.</p></div><div class="step"><div class="step-number">02</div><h3>راجع الحساب</h3><p>اطلع على الإجمالي قبل الخصم وبعده.</p></div><div class="step"><div class="step-number">03</div><h3>ارسل استفسارك</h3><p>زر واتساب يجهز رسالة بتفاصيل طلبك.</p></div><div class="step"><div class="step-number">04</div><h3>أكد قبل الدفع</h3><p>اتفق على تفاصيل الخدمة والسعر وبيانات الاستلام قبل التحويل.</p></div></div></div></section>
+    <section id="about" class="section section-soft"><div class="container"><div class="section-head"><div class="eyebrow">تعرف علينا</div><h2>مين مقدم الخدمة؟</h2></div><div class="about-layout"><div class="card about-text"><h3>مالك سامح</h3><p>هذه صفحة تعريف وحساب تكلفة لخدمات دعم ومتابعة تعليمية مرتبطة بـ QUREO. الخدمة مستقلة، ولا تمثل موقع QUREO الرسمي أو شراكة مع المنصة.</p><ul class="about-list"><li>اطّلع على التكلفة التقديرية قبل إرسال الطلب.</li><li>استفسر عن تفاصيل الخدمة المتاحة قبل الاتفاق.</li><li>لا ترسل كلمات المرور أو رموز التحقق ضمن رسائل الطلب.</li></ul><a href="#calculator" class="btn btn-outline">ابدأ بحساب التكلفة</a></div><div class="card contact-panel"><h3>وسائل التواصل</h3><p style="margin-bottom:8px">يمكنك مراجعة صفحات التواصل أو إرسال استفسارك مباشرة.</p><a class="contact-row" href="https://wa.me/201042231211" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">💬</span><span><strong>واتساب</strong><span dir="ltr">01042231211</span></span></a><a class="contact-row" href="https://www.instagram.com/maleksameh011/" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">◎</span><span><strong>إنستجرام</strong><span dir="ltr">@maleksameh011</span></span></a><a class="contact-row" href="https://www.facebook.com/maleksameh011" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">f</span><span><strong>فيسبوك</strong><span>افتح صفحة التواصل</span></span></a></div></div></div></section>
+    <section id="faq" class="section"><div class="container"><div class="section-head"><div class="eyebrow">الأسئلة الشائعة</div><h2>إجابات مهمة قبل الطلب</h2></div><div class="faq"><details><summary>هل هذه الصفحة هي الموقع الرسمي لـ QUREO؟</summary><p>لا. هذه صفحة خدمات تعليمية مستقلة يقدمها مالك سامح، وليست الموقع الرسمي للمنصة ولا تدّعي وجود شراكة معها.</p></details><details><summary>هل الرقم اللي في الحاسبة سعر نهائي؟</summary><p>هو حساب تقديري بحسب عدد الشابترات والإعادات والخصم الظاهر. تواصل لتأكيد تفاصيل الخدمة والتكلفة قبل الاتفاق أو الدفع.</p></details><details><summary>هل لازم أدفع قبل الاستفسار؟</summary><p>لا. تقدر ترسل رسالة استفسار من غير دفع. راجع تفاصيل الخدمة والسعر واسم المستلم قبل أي تحويل.</p></details><details><summary>هل الموقع بيطلب مني إنشاء حساب؟</summary><p>لا. الموقع لا يطلب تسجيل دخول ولا يجمع كلمات مرور؛ زر الطلب يفتح رسالة واتساب فيها تفاصيل الأعداد والتكلفة فقط.</p></details><details><summary>إزاي أغيّر تفاصيل الطلب؟</summary><p>حرّك المؤشرات في الحاسبة لتحديث السعر فورًا، ثم اضغط زر واتساب لإرسال التفاصيل الجديدة.</p></details></div></div></section>
+    <section id="payment" class="section" style="padding-top:0"><div class="container"><div class="payment"><div><div class="eyebrow" style="margin-bottom:6px">معلومات الدفع</div><h2>فودافون كاش — بعد التأكيد فقط</h2><p>استخدم الرقم التالي فقط بعد الاتفاق والتأكد من اسم صاحب المحفظة وبيانات الطلب.</p></div><div class="payment-actions"><span class="payment-number" id="paymentNumber">01042231211</span><button class="btn btn-muted" type="button" id="copyNumber">نسخ الرقم</button></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><strong>مالك سامح</strong><p>خدمات دعم ومتابعة تعليمية مستقلة متعلقة بمنصة QUREO.</p><p>لا توجد مدفوعات أو تسجيل حسابات عبر هذه الصفحة.</p></div><nav class="footer-links" aria-label="روابط سريعة"><a href="#calculator">حاسبة الأسعار</a><a href="#how-it-works">طريقة الطلب</a><a href="#faq">الأسئلة الشائعة</a><a href="https://wa.me/201042231211" target="_blank" rel="noopener noreferrer">واتساب</a><a href="https://www.instagram.com/maleksameh011/" target="_blank" rel="noopener noreferrer">إنستجرام</a><a href="https://www.facebook.com/maleksameh011" target="_blank" rel="noopener noreferrer">فيسبوك</a></nav></div><div class="copyright"><span>© <span id="year"></span> مالك سامح. جميع الحقوق محفوظة.</span><span>التكلفة التقديرية تُحسب على الجهاز، ولا تُرسل بيانات إلى خادم هذا الموقع.</span></div></div></footer>
+  <a class="floating-wa" href="https://wa.me/201042231211" target="_blank" rel="noopener noreferrer" aria-label="تواصل مباشرة على واتساب"><span aria-hidden="true">💬</span><span class="wa-label">تواصل على واتساب</span></a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const CHAPTER_PRICE = 8;
+    const RETRY_PRICE = 8;
+    const DISCOUNT_RATE = 0.5;
+    const WHATSAPP_PHONE = '201042231211';
+    const chapters = $('chapters');
+    const retries = $('retries');
+    const fmt = amount => new Intl.NumberFormat('ar-EG-u-nu-latn', {maximumFractionDigits:2}).format(amount);
+    const money = amount => fmt(amount) + ' جنيه';
+    function calculate(){
+      const ch = Number(chapters.value);
+      const ret = Number(retries.value);
+      const base = ch * CHAPTER_PRICE;
+      const retryCost = ret * RETRY_PRICE;
+      const before = base + retryCost;
+      const discount = before * DISCOUNT_RATE;
+      const total = before - discount;
+      $('chapterCount').textContent = fmt(ch);
+      $('retryCount').textContent = fmt(ret);
+      $('base').textContent = money(base);
+      $('retryCost').textContent = money(retryCost);
+      $('beforeTotal').textContent = money(before);
+      $('discountAmount').textContent = money(discount);
+      $('total').textContent = fmt(total);
+      $('finalTotal').textContent = money(total);
+      return {ch,ret,base,retryCost,before,discount,total};
+    }
+    chapters.addEventListener('input',calculate);
+    retries.addEventListener('input',calculate);
+    $('year').textContent = new Date().getFullYear();
+    $('sendOrder').addEventListener('click', () => {
+      const d = calculate();
+      const message = `السلام عليكم، أرغب في الاستفسار عن خدمات متابعة QUREO.\nنوع المتابعة: ${$('term').value}\nعدد الشابترات: ${d.ch}\nعدد الإعادات: ${d.ret}\nتكلفة الشابترات قبل الخصم: ${money(d.base)}\nتكلفة الإعادات قبل الخصم: ${money(d.retryCost)}\nالإجمالي قبل الخصم: ${money(d.before)}\nالخصم المعلن: 50% (${money(d.discount)})\nالإجمالي التقديري بعد الخصم: ${money(d.total)}\nأرجو توضيح تفاصيل الخدمة وتأكيد السعر قبل الدفع.`;
+      window.open('https://wa.me/' + WHATSAPP_PHONE + '?text=' + encodeURIComponent(message),'_blank','noopener,noreferrer');
+    });
+    const menuToggle = $('menuToggle');
+    const mobileNav = $('mobileNav');
+    function closeMenu(){mobileNav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','فتح القائمة');menuToggle.textContent='☰'}
+    menuToggle.addEventListener('click',()=>{const isOpen=mobileNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(isOpen));menuToggle.setAttribute('aria-label',isOpen?'إغلاق القائمة':'فتح القائمة');menuToggle.textContent=isOpen?'×':'☰'});
+    mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+    let toastTimer;
+    function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2600)}
+    $('copyNumber').addEventListener('click',async()=>{const num=$('paymentNumber').textContent.trim();try{if(!navigator.clipboard)throw Error('unsupported');await navigator.clipboard.writeText(num);toast('تم نسخ رقم فودافون كاش')}catch(e){toast('الرقم: '+num+' — يمكنك نسخه يدويًا')}});
+    calculate();
+  </script>
 </body>
 </html>
